@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Smart Shop</title>
+    <script
+      src="https://kit.fontawesome.com/77a0c1aa1e.js"
+      crossorigin="anonymous"
+></script>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        /* background-color: #36454F; */
+        background-color: black;
+        color: white;
+       font-family: 'Great Vibes', cursive;  
+      }
+
+      /* .img {
+        width: 200px;
+        height: 200px;
+        border: 2px solid yellowgreen;
+        padding: 5px;
+        margin-top: 10px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .img:hover {
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        background-color: lightblue; 
+      } */
+      .img {
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        margin-left: 40px;
+      }
+
+      .img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .img:hover {
+        transform: scale(1.05);
+      }
+
+      /* p {
+        box-shadow: 0px 6px 8px rgb(0, 0, 0);
+        padding: 9px;
+        margin: 10px;
+        height: 60px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      p:hover {
+        transform: scale(1.05);
+      } */
+
+      .product {
+        width: 400px;
+        height: 500px;
+      }
+      .product {
+        transition: transform 0.3s ease;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 25px;
+        margin-top: 20px;
+        border: 2px solid white;
+        font-size: 15px;
+      }
+
+      .product:hover {
+        transform: scale(1.01);
+        /* background-color: rgb(32, 208, 196); */
+        background-color: yellowgreen;
+        border: 4px solid yellowgreen;
+        color: black;
+      }
+
+      #c1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 10px;
+        /* box-shadow: 0px 0px 10px 0px yellowgreen; */
+      }
+
+      .cat {
+        box-shadow: none;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        /* box-shadow: 0px 5px 0px black; */
+        /* width: 100%; */
+        /* height: 100%; */
+        background-color: white;
+        color: black;
+        margin: 0px;
+        /* position: fixed; */
+        padding: 0px;
+      }
+
+      .fa-list {
+        margin-left: 10px;
+      }
+
+      .search {
+        margin-top: 20px;
+      }
+
+      .wish {
+        margin-top: 0px;
+        cursor: pointer;
+        width: 90px;
+        height: 30px;
+        border: 2px solid yellowgreen;
+        background-color: white;
+      }
+
+      .wish:hover {
+        background-color: yellowgreen;
+      }
+
+      .ywish {
+        cursor: pointer;
+        width: 90px;
+        height: 30px;
+        border: 2px solid yellowgreen;
+        background-color: white;
+      }
+
+      .ywish:hover {
+        background-color: yellowgreen;
+      }
+
+      #btn {
+        height: 30px;
+        cursor: pointer;
+        border: 2px solid yellowgreen;
+        background-color: white;
+      }
+
+      #btn:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+
+      .fa-solid {
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      .fa-list {
+        margin-left: 200px;
+      }
+
+      #searchbox {
+        width: 600px;
+        height: 30px;
+        border: 2px solid yellowgreen;
+        /* border-radius: 10px; */
+        color: black;
+      }
+
+      .shopname h1 {
+        color: black;
+      }
+
+      h1 {
+        color: black;
+      }
+
+      .add-to-cart {
+        background-color: cyan;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-family: 'Great Vibes', cursive; 
+      }
+
+      .details {
+        background-color: cyan;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+
+   .para{
+    color: red;
+   }
+
+      .cartcont {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        border: 1px solid #ccc;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        /* align-items: start; */
+        padding: 20px;
+        content: initial;
+     
+            }
+
+      .cart-info {
+        text-align: right;
+      }
+
+      .cart-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .buy-now {
+        margin-top: 10px;
+      }
+
+      span {
+        color: yellowgreen;
+      }
+
+
+
+      /* Media query for responsiveness */
+      @media (max-width: 768px) {
+        .cartcont {
+          width: 100%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+        }
+
+        .cart-info {
+          text-align: center;
+        }
+
+        .cart-summary {
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="shopname">
+        <h1>AI Sh<span>op</span></h1>
+      </div>
+
+      <div class="search">
+        <input type="search" placeholder="Search here" id="searchbox" />
+        <button id="btn">Search</button>
+      </div>
+
+      <div class="wishlist">
+        <i class="fa-solid fa-list" style="color: yellowgreen"></i>
+        <button class="ywish">Your wishlist</button>
+      </div>
+
+      <div class="wishlist">
+        <i class="fa-solid fa-cart-shopping" style="color: yellowgreen"></i>
+        <button class="wish" id="cart">Cart</button>
+      </div>
+    </nav>
+
+    <div id="c1"></div>
+
+    <!-- <img src="" alt="" id="img">
+          <h3 id="title"></h3>
+        <p id="cat"></p>
+         <p id="rating"></p>
+         <p id="cnt"></p>
+         <p id="price"></p> -->
+
+    <script src="shop.js"></script>
+  </body>
+</html>

@@ -73,7 +73,8 @@
       .product {
         transition: transform 0.3s ease;
         width: 300px;
-        padding: 20px;
+        padding: 15px;
+        height: 550px;
         border-radius: 10px;
         margin-left: 25px;
         margin-top: 20px;
@@ -117,9 +118,9 @@
         margin-left: 10px;
       }
 
-      .search {
+      /* .search {
         margin-top: 20px;
-      }
+      } */
 
       .wish {
         margin-top: 0px;
@@ -134,24 +135,19 @@
         background-color: yellowgreen;
       }
 
-      .ywish {
-        cursor: pointer;
-        width: 90px;
-        height: 30px;
-        border: 2px solid yellowgreen;
-        background-color: white;
-      }
-
-      .ywish:hover {
-        background-color: yellowgreen;
-      }
+      
 
       #btn {
         height: 30px;
         cursor: pointer;
-        border: 2px solid yellowgreen;
+        /* border: 2px solid yellowgreen; */
         background-color: white;
+        border: none;
+    
+
       }
+
+     
 
       #btn:hover {
         background-color: yellowgreen;
@@ -159,24 +155,60 @@
       }
 
       .fa-solid {
-        margin-top: 10px;
+        margin-top: 20px;
         padding: 10px;
       }
 
       .fa-list {
-        margin-left: 200px;
+        margin-left: 900px;
+      }
+
+      .ywish {
+        cursor: pointer;
+        width: 90px;
+        height: 30px;
+        border: 2px solid yellowgreen;
+        background-color: white;
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+
+      .ywish:hover {
+        background-color: yellowgreen;
       }
 
       #searchbox {
         width: 600px;
         height: 30px;
         border: 2px solid yellowgreen;
-        /* border-radius: 10px; */
+        border-radius: 10px;
         color: black;
+        margin-top: 20px;
+        /* margin-bottom: 50px; */
+        position: absolute;
+        margin-bottom: 40px;
+        margin-right: 200px;
+        padding: 0px;
+        margin-left: 200px;
+        
+       
       }
+
+      .fa-magnifying-glass{
+        position: absolute;
+        margin-left:770px;
+        padding: 0px;
+        margin-top: 12px;
+        margin-bottom: 0px;
+      
+      
+        
+      }
+
 
       .shopname h1 {
         color: black;
+        margin-left: 10px;
       }
 
       h1 {
@@ -185,12 +217,16 @@
 
       .add-to-cart {
         background-color: cyan;
-        width: 100px;
+        width: 200px;
+        margin-top:5px;
+        margin-left: 33px;
+
         padding: 5px;
         cursor: pointer;
         border: 2px solid black;
         border-radius: 10px;
         font-family: 'Great Vibes', cursive; 
+    
       }
 
       .details {
@@ -203,10 +239,7 @@
         border-radius: 10px;
       }
 
-   .para{
-    color: red;
-   }
-
+  
       .cartcont {
         position: fixed;
         bottom: 20px;
@@ -241,6 +274,16 @@
       }
 
 
+      .head{
+      color: yellowgreen;
+        margin-right: 130px;
+      }
+
+      .buy-now{
+        background-color: yellowgreen;
+      }
+
+     
 
       /* Media query for responsiveness */
       @media (max-width: 768px) {
@@ -269,8 +312,8 @@
       </div>
 
       <div class="search">
-        <input type="search" placeholder="Search here" id="searchbox" />
-        <button id="btn">Search</button>
+        <input type="text" placeholder="Search here" id="searchbox" />
+        <button id="btn"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
       </div>
 
       <div class="wishlist">

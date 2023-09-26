@@ -30,6 +30,7 @@ function updateCart() {
   const total = totalPrice + deliveryCharge + totalTax;
 
   cartInfo.innerHTML = `
+  <h3 class="head">My Cart</h3>
     <p>Total Items: ${totalItems}</p>
     <p>Total Price: $${totalPrice.toFixed(2)}</p>
     <p>Delivery Charge: $${deliveryCharge.toFixed(2)}</p>
@@ -88,6 +89,10 @@ btn.addEventListener("click", (e) => {
     addToCartButton.classList.add("add-to-cart");
     addToCartButton.innerText = "Add to Cart";
 
+    const addtoWishList = document.createElement("button");
+      addtoWishList.classList.add("add-to-cart");
+      addtoWishList.innerText = "Add to WishList";
+
     img.src = ele.image;
     title.innerText = ele.title;
     cat.innerText = "Category: " + ele.category;
@@ -102,7 +107,7 @@ btn.addEventListener("click", (e) => {
     productDiv.appendChild(cnt);
     productDiv.appendChild(price);
     productDiv.appendChild(addToCartButton);
-
+    productDiv.appendChild(addtoWishList)
     addToCartButton.addEventListener("click", () => {
       cartItems.push(ele);
       updateCart();
@@ -149,6 +154,10 @@ url
       addToCartButton.classList.add("add-to-cart");
       addToCartButton.innerText = "Add to Cart";
 
+      const addtoWishList = document.createElement("button");
+      addtoWishList.classList.add("add-to-cart");
+      addtoWishList.innerText = "Add to WishList";
+
       img.src = ele.image;
       title.innerText = ele.title;
       cat.innerText = "Category: " + ele.category;
@@ -163,6 +172,8 @@ url
       productDiv.appendChild(cnt);
       productDiv.appendChild(price);
       productDiv.appendChild(addToCartButton);
+      productDiv.appendChild(addtoWishList)
+
 
       addToCartButton.addEventListener("click", () => {
         cartItems.push(ele);

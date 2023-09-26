@@ -200,6 +200,7 @@
         padding: 0px;
         margin-top: 12px;
         margin-bottom: 0px;
+   
       
       
         
@@ -287,6 +288,10 @@
 
       /* Media query for responsiveness */
       @media (max-width: 768px) {
+
+        *{
+          box-sizing: border-box;
+        }
         .cartcont {
           width: 100%;
           left: 0;
@@ -302,7 +307,90 @@
         .cart-summary {
           align-items: center;
         }
+
+
+        
+      #searchbox {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       margin-left: 0;
+        
+      
+       
       }
+
+      .shopname h1 {
+        color: white;
+        margin-left: 10px;
+       
+      }
+
+     
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        /* box-shadow: 0px 5px 0px black; */
+        /* width: 100%; */
+        /* height: 100%; */
+        background-color: black;
+        color: red;
+        margin: 0px;
+        /* position: fixed; */
+        padding: 0px;
+      }
+
+      .fa-magnifying-glass{
+        position: absolute;
+        margin-left:330px;
+        padding: 0px;
+        margin-top: 12px;
+        margin-bottom: 0px;
+      }
+
+      .ywish {
+        cursor: pointer;
+        width: 90px;
+        height: 30px;
+        border: 2px solid yellowgreen;
+        /* background-color: ; */
+        margin-left: 0px;
+        margin-top: 20px;
+        display: none;
+      }
+
+      .ywish:hover {
+        background-color: yellowgreen;
+      }
+      
+      #c1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+      }
+
+     .fa-cart-shopping{
+      display: none;
+     }
+
+      .wish{
+        display: flex;
+        margin-top: 60px;
+      }
+
+      .fa-list{
+        display:  none;
+      }
+
+      #btn{
+        background-color: black;
+      }
+        
+      }
+
+
+    
     </style>
   </head>
   <body>
@@ -313,7 +401,7 @@
 
       <div class="search">
         <input type="text" placeholder="Search here" id="searchbox" />
-        <button id="btn"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+        <button id="btn"><i class="fa-solid fa-magnifying-glass" style="color: yellowgreen;"></i></button>
       </div>
 
       <div class="wishlist">
@@ -336,6 +424,9 @@
          <p id="cnt"></p>
          <p id="price"></p> -->
 
-    <script src="shop.js"></script>
+    <script src="shop.js">
+   
+
+    </script>
   </body>
 </html>
